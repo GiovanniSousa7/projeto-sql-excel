@@ -70,6 +70,8 @@ SELECT
   (payments.receita / payments.paid_count / 1000) AS "ticket médio (k, R$)"
 FROM leads
 LEFT JOIN payments ON leads.visit_page_month = payments.paid_month;
+```
+---
 
 ### 🌎 Top 5 Estados com Mais Vendas no Brasil
 
@@ -86,6 +88,9 @@ WHERE paid_date BETWEEN '2021-08-01' AND '2021-08-31'
 GROUP BY país, estado
 ORDER BY "vendas (#)" DESC
 LIMIT 5;
+```
+
+---
 
 
 ### 📆 Visitas por Dia da Semana
@@ -109,3 +114,4 @@ FROM sales.funnel
 WHERE visit_page_date BETWEEN '2021-08-01' AND '2021-08-31'
 GROUP BY dia_semana
 ORDER BY dia_semana;
+```
